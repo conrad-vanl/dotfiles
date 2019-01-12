@@ -71,7 +71,7 @@
   linter: {}
   "linter-eslint":
     eslintrcPath: "~/.eslintrc"
-    globalNodePath: "/Users/drewbarontini/.nvm/versions/node/v7.10.0"
+    globalNodePath: "/Users/conrad/.nvm/versions/node/v7.10.0"
     useGlobalEslint: true
   "linter-ui-default":
     panelHeight: 81

@@ -3,21 +3,21 @@
     title: "Belay"
     group: "Products"
     paths: [
-      "/Users/drewbarontini/Code/Sites/belay"
+      "/Users/conrad/Code/Sites/belay"
     ]
   },
   {
     title: "Creator"
     group: "Products"
     paths: [
-      "/Users/drewbarontini/Code/Apps/creator"
+      "/Users/conrad/Code/Apps/creator"
     ]
   }
   {
     title: "New North"
     group: "Products"
     paths: [
-      "/Users/drewbarontini/Code/Sites/new-north"
+      "/Users/conrad/Code/Sites/new-north"
     ]
   }
 ]
