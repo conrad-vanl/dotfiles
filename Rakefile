@@ -9,7 +9,6 @@ require 'rake'
 original_locations                   = {}
 original_locations[:ackrc]           = "#{ ENV['HOME'] }/.dotfiles/ack/ackrc"
 original_locations[:agignore]        = "#{ ENV['HOME'] }/.dotfiles/ag/agignore"
-original_locations[:atom]            = "#{ ENV['HOME'] }/.dotfiles/atom"
 original_locations[:bash_directory]  = "#{ ENV['HOME'] }/.dotfiles/bash"
 original_locations[:bash_powerline]  = "#{ ENV['HOME'] }/.dotfiles/bash/partials/prompt-powerline"
 original_locations[:bash_profile]    = "#{ ENV['HOME'] }/.dotfiles/bash/bash_profile"
@@ -25,7 +24,6 @@ original_locations[:hyper]           = "#{ ENV['HOME'] }/.dotfiles/hyper/hyper.j
 original_locations[:inputrc]         = "#{ ENV['HOME'] }/.dotfiles/bash/inputrc"
 original_locations[:prettierrc]      = "#{ ENV['HOME'] }/.dotfiles/prettier/prettierrc"
 original_locations[:rspec]           = "#{ ENV['HOME'] }/.dotfiles/rspec/rspec"
-original_locations[:spacemacs]       = "#{ ENV['HOME'] }/.dotfiles/spacemacs/spacemacs"
 original_locations[:stylelint]       = "#{ ENV['HOME'] }/.dotfiles/stylelint/stylelintrc"
 original_locations[:tmux_conf]       = "#{ ENV['HOME'] }/.dotfiles/tmux/tmux.conf"
 original_locations[:tmuxline_conf]   = "#{ ENV['HOME'] }/.dotfiles/tmux/tmuxline_snapshot"
@@ -37,7 +35,6 @@ original_locations[:vimrc]           = "#{ ENV['HOME'] }/.dotfiles/vim/vimrc"
 new_locations                   = {}
 new_locations[:ackrc]           = "#{ ENV['HOME'] }/.ackrc"
 new_locations[:agignore]        = "#{ ENV['HOME'] }/.agignore"
-new_locations[:atom]            = "#{ ENV['HOME'] }/.atom"
 new_locations[:bash_directory]  = "#{ ENV['HOME'] }/.bash"
 new_locations[:bash_powerline]  = "#{ ENV['HOME'] }/.bash-powerline.sh"
 new_locations[:bash_profile]    = "#{ ENV['HOME'] }/.bash_profile"
@@ -53,7 +50,6 @@ new_locations[:hyper]           = "#{ ENV['HOME'] }/.hyper.js"
 new_locations[:inputrc]         = "#{ ENV['HOME'] }/.inputrc"
 new_locations[:prettierrc]      = "#{ ENV['HOME'] }/.prettierrc"
 new_locations[:rspec]           = "#{ ENV['HOME'] }/.rspec"
-new_locations[:spacemacs]       = "#{ ENV['HOME'] }/.spacemacs"
 new_locations[:stylelint]       = "#{ ENV['HOME'] }/.stylelintrc"
 new_locations[:tmux_conf]       = "#{ ENV['HOME'] }/.tmux.conf"
 new_locations[:tmuxline_conf]   = "#{ ENV['HOME'] }/.tmuxline_snapshot"
@@ -319,25 +315,6 @@ namespace :install do
       message 'Installing Outlier Applications...'
 
       system 'bash scripts/outliers'
-    end
-  end
-
-  # ====================================
-  #   Install Sublime Text Settings
-  # ====================================
-
-  desc '(INACTIVE) Install Submit Text settings'
-  task :sublime_text_settings do
-    prompt 'Sublime Text Settings'
-
-    if response?('y')
-      message "Open Sublime Text... Type 'next' when you are ready."
-
-      if response?('next')
-        message 'Installing Sublime Text Settings...'
-        system 'bash scripts/sublime'
-        system 'defaults write com.sublimetext.2 ApplePressAndHoldEnabled -bool false'
-      end
     end
   end
 
