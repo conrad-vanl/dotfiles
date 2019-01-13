@@ -22,34 +22,34 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 
 # Trackpad: enable tap to click for this user and for the login screen
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+# defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+# defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Disable press-and-hold for keys in favor of key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+# defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
+# defaults write NSGlobalDomain KeyRepeat -int 1
 
 # Set a shorter Delay until key repeat
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+# defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Mouse tracking speed (1...5)
-defaults write NSGlobalDomain com.apple.mouse.scaling -float 5
+# defaults write NSGlobalDomain com.apple.mouse.scaling -float 5
 
 # Trackpad tracking speed (1...5)
-defaults write NSGlobalDomain com.apple.trackpad.scaling -int 5
+# defaults write NSGlobalDomain com.apple.trackpad.scaling -int 5
 
 # Scrolling speed (1...5)
-defaults write NSGlobalDomain com.apple.scrollwheel.scaling -float 5
+# defaults write NSGlobalDomain com.apple.scrollwheel.scaling -float 5
 
 # Enable full keyboard access for all controls (eg enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Require password immediately after sleep or screen saver begins
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
+# defaults write com.apple.screensaver askForPassword -int 1
+# defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Don't show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
@@ -68,13 +68,13 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 defaults write com.apple.dock tilesize -int 50
 
 # Change minimize/maximize window effect
-defaults write com.apple.dock mineffect -string "scale"
+# defaults write com.apple.dock mineffect -string "scale"
 
 # Wipe all (default) app icons from the Dock
 defaults write com.apple.dock persistent-apps -array ""
 
 # Don’t show recent applications in Dock
-defaults write com.apple.dock show-recents -bool false
+# defaults write com.apple.dock show-recents -bool false
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false

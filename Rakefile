@@ -67,7 +67,6 @@ tasks = [
   'homebrew_packages',
   'tmux_plugin_manager',
   'nvm',
-  'npm_packages',
   'gems',
   'macos_settings',
   'cask',
@@ -229,21 +228,6 @@ namespace :install do
   end
 
   # ====================================
-  #   Install NPM Packages
-  # ====================================
-
-  desc 'Install NPM packages'
-  task :npm_packages do
-    prompt 'NPM Packages'
-
-    if response?('y')
-      message 'Installing NPM Packages...'
-
-      system 'bash scripts/npm'
-    end
-  end
-
-  # ====================================
   #   Install Gems
   # ====================================
 
@@ -304,21 +288,6 @@ namespace :install do
   end
 
   # ====================================
-  #   Install Outliers
-  # ====================================
-
-  desc '(INACTIVE) Install outlier applications'
-  task :outliers do
-    prompt 'Outlier Applications'
-
-    if response?('y')
-      message 'Installing Outlier Applications...'
-
-      system 'bash scripts/outliers'
-    end
-  end
-
-  # ====================================
   #   Install Visual Studio Code Settings
   # ====================================
 
@@ -330,21 +299,6 @@ namespace :install do
       message 'Installing Visual Studio Code Settings...'
 
       system 'bash scripts/visual-studio-code'
-    end
-  end
-
-  # ====================================
-  #   Install Pow
-  # ====================================
-
-  desc '(INACTIVE) Install Pow for Rails URLs in dev'
-  task :pow do
-    prompt 'Pow'
-
-    if response?('y')
-      message 'Installing Pow...'
-
-      system 'bash scripts/pow'
     end
   end
 

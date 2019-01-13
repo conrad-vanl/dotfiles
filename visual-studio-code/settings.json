@@ -1,10 +1,47 @@
+// Place your settings in this file to overwrite the default settings
 {
+  "javascript.validate.enable": false,
+  // "typescript.tsdk": "/Users/conrad/.nvm/versions/node/v8.11.2/lib/node_modules/typescript/lib",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.fontSize": 14,
+  "search.exclude": {
+    "**/node_modules": false
+  },
+  "window.zoomLevel": 0,
+  "jest.pathToJest": "npm run test -- -- ",
+  "editor.fontFamily": "Operator Mono, Inconsolata, Menlo, Monaco, 'Courier New', monospace",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [{
+        "scope": "comment",
+        "settings": {
+          "fontStyle": "italic",
+          "color": "#76726E"
+        },
+      },
+      {
+        "scope": "entity.other.attribute-name",
+        "settings": {
+          "fontStyle": "italic",
+          "color": "#76726E"
+
+        }
+      }
+    ]
+  },
+  "color-highlight.markerType": "dot",
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "eslint.packageManager": "yarn",
+
   "breadcrumbs.enabled": true,
   "editor.cursorStyle": "line",
   "editor.fontLigatures": true,
-  "editor.fontFamily": "Operator Mono",
-  "editor.fontSize": 14,
-  "editor.formatOnSave": true,
   "editor.lineHeight": 22,
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
@@ -12,28 +49,10 @@
   "editor.renderIndentGuides": true,
   "editor.snippetSuggestions": "top",
   "editor.tabCompletion": "onlySnippets",
-  "editor.tabSize": 2,
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "scope": "comment",
-        "settings": {
-          "fontStyle": "italic"
-        }
-      },
-      {
-        "scope": "entity.other.attribute-name",
-        "settings": {
-          "fontStyle": "italic"
-        }
-      }
-    ]
-  },
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
   "emmet.triggerExpansionOnTab": true,
-  "eslint.autoFixOnSave": true,
   "explorer.autoReveal": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
@@ -49,14 +68,12 @@
   },
   "files.insertFinalNewline": false,
   "files.trimFinalNewlines": true,
-  "flow.useNPMPackagedFlow": true,
   "git.allowForcePush": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.inputValidation": "warn",
   "git.rebaseWhenSync": true,
   "javascript.updateImportsOnFileMove.enabled": "never",
-  "javascript.validate.enable": false,
   "prettier.disableLanguages": ["vue", "markdown"],
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
@@ -74,71 +91,4 @@
   "terminal.integrated.fontWeightBold": "normal",
   "terminal.integrated.lineHeight": 1.4,
   "terminal.integrated.shellArgs.osx": ["-l"],
-  "vim.easymotion": true,
-  "vim.easymotionMarkerFontFamily": "Operator Mono",
-  "vim.easymotionMarkerHeight": 20,
-  "vim.easymotionMarkerYOffset": 2,
-  "vim.hlsearch": true,
-  "vim.leader": "<space>",
-  "vim.mouseSelectionGoesIntoVisualMode": false,
-  // https://code.visualstudio.com/docs/getstarted/keybindings
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": [":"],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.showCommands",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": ["leader", "s"],
-      "after": [],
-      "commands": [
-        {
-          "command": ":noh1",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": ["leader", "v"],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.splitEditor",
-          "args": []
-        }
-      ]
-    },
-    {
-      "before": ["leader", "h"],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.splitEditorDown",
-          "args": []
-        }
-      ]
-    }
-  ],
-  "vim.overrideCopy": false,
-  "workbench.editor.tabSizing": "shrink",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.startupEditor": "newUntitledFile",
-  // https://code.visualstudio.com/docs/getstarted/theme-color-reference
-  "workbench.colorCustomizations": {
-    // Color adjustments for the "Plastic" theme
-    "panelTitle.activeBorder": "#ffffff",
-    "titleBar.border": "#080a0f",
-    "terminal.ansiBrightBlue": "#19b9c4",
-    "terminal.ansiBrightGreen": "#8cc567",
-    "terminal.ansiBrightRed": "#f16372",
-    "terminal.ansiWhite": "#d1d6dc"
-  },
-  "workbench.colorTheme": "Plastic - deprioritised punctuation",
-  "window.clickThroughInactive": false,
-  "window.zoomLevel": 0
 }

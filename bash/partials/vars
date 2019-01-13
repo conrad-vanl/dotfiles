@@ -16,3 +16,6 @@ SNIPPETS_PATH="$HOME/.dotfiles/vim/UltiSnips"
 VIMRC_PATH='$HOME/.dotfiles/vim/vimrc'
 VIM_FILES_PATH="$HOME/.dotfiles/vim"
 VIM_MAPPINGS_PATH="$HOME/.dotfiles/vim/partials/mappings.vim"
+ANDROID_HOME=/Users/conrad/Library/Android/sdk
+EDITOR=code
+REACT_EDITOR=code

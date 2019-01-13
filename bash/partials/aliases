@@ -11,26 +11,6 @@
 alias a='ag'
 
 # -------------------------------------
-#   Brew
-# -------------------------------------
-
-# ----- Drew's Brew ----- #
-
-alias drew='brew'
-
-alias d='brew'
-alias dc='brew cask'
-alias dcs='brew cask search'
-alias dci='brew cask install'
-alias dcu='brew cask uninstall'
-alias dd='brew doctor'
-alias di='brew install'
-alias dl='brew list'
-alias du='brew update'
-alias dg='brew upgrade'
-alias beerfest='brew update && brew cleanup && brew prune && brew doctor'
-
-# -------------------------------------
 #   Files & Jumps
 # -------------------------------------
 

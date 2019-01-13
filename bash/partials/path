@@ -16,6 +16,8 @@ PATH_DIRECTORIES=(
   '/usr/local/opt/qt5/bin'
   "$HOME/.dotfiles/bin"
   "$HOME/.nvm/versions/node/v7.10.0"
+  "$ANDROID_HOME/platform-tools"
+  "/Applications/Visual\ Studio\ Code\ \-\ Insiders.app/Contents/Resources/app/bin"
 )
 
 [[ -d ~/.dotfiles-local/bin ]] && PATH_DIRECTORIES+=("$HOME/.dotfiles-local/bin")

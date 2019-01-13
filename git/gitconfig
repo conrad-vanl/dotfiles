@@ -85,11 +85,10 @@
 
   rebase = true
 
-[user]
-
-  name = Drew Barontini
-  email = hello@drewb.io
-
 [rebase]
 
   autoStash = true
+
+[user]
+	name = Conrad VanLandingham
+	email = hi@convan.me

@@ -10,18 +10,10 @@ mas_install() {
 }
 
 applications=(
-  937984704 # Amphetamine
-  1290358394 # Cardhop
-  924726344 # Deliveries
-  975937182 # Fantastical
-  990588172 # Gestimer
-  1082624744 # Gifox
-  1289197285 # MindNode
   803453959 # Slack
-  904280696 # Things 3
-  1191449274 # ToothFairy
-  1384080005 # Tweetbot
-  1225570693 # Ulysses
+  497799835 # Xcode
+  1176895641 # Spark
+
 )
 
 for application in ${applications[@]}; do
@@ -32,6 +24,17 @@ done
 #   Disabled
 # -------------------------------------
 
+# 937984704 # Amphetamine
+# 1290358394 # Cardhop
+# 924726344 # Deliveries
+# 975937182 # Fantastical
+# 990588172 # Gestimer
+# 1082624744 # Gifox
+# 1289197285 # MindNode
+# 904280696 # Things 3
+# 1191449274 # ToothFairy
+# 1384080005 # Tweetbot
+# 1225570693 # Ulysses
 # 427475982 (BreakTime)
 # 969418666 (ColorSnapper)
 # 1055511498 (Day One)

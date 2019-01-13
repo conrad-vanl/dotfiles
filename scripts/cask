@@ -9,38 +9,34 @@ brew tap caskroom/cask
 brew tap caskroom/versions
 
 applications=(
-  1password
   aerial
+  abstract
   adobe-creative-cloud
-  alfred
-  appcleaner
-  backblaze
+  android-studio
   bartender
   basecamp
   bettertouchtool
-  cleanmymac
+  caffeine
   dash
+  dashlane
   dropbox
   firefox
-  flux
   google-chrome
   hazel
-  imageoptim
+  iconjar
   istat-menu
   iterm2
-  keyboard-maestro
+  marvel
+  muse
   moom
-  notion
   nucleo
-  omnigraffle
-  rescuetime
-  rocket
-  sip
+  oh-my-zsh
+  principle
   sketch
+  sketchup
   spotify
   transmit
-  visual-studio-code
-  quitter
+  visual-studio-code-insiders
   zoomus
 )
 
