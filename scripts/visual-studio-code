@@ -5,7 +5,7 @@
 #
 # ****************************************************
 
-cd ~/Library/Application\ Support/Code/User
+cd ~/Library/Application\ Support/Code\ -\ Insiders/User
 [[ -f settings.json ]] && rm settings.json
 ln -s ~/.dotfiles/visual-studio-code/settings.json settings.json
 echo 'Symlinked ~/.dotfiles/visual-studio-code/snippets.json to Visual Studio Code Settings'

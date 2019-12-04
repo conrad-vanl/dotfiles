@@ -10,7 +10,7 @@
 sudo -v
 
 # Hide the menu bar
-defaults write NSGlobalDomain _HIHideMenuBar -bool true
+# defaults write NSGlobalDomain _HIHideMenuBar -bool true
 
 # Set highlight color to gold
 # defaults write NSGlobalDomain AppleHighlightColor -string "0.984300 0.929400 0.451000"
@@ -92,7 +92,7 @@ defaults write com.apple.dock autohide -bool true
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 # Fix macOS Mojave weird font aliasing
-defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+# defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 
 # Kill affected applications
 for app in Finder Dock SystemUIServer; do killall "$app" > /dev/null 2>&1; done
