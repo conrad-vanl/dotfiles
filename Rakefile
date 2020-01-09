@@ -9,9 +9,6 @@ require 'rake'
 original_locations                   = {}
 original_locations[:ackrc]           = "#{ ENV['HOME'] }/.dotfiles/ack/ackrc"
 original_locations[:agignore]        = "#{ ENV['HOME'] }/.dotfiles/ag/agignore"
-original_locations[:bash_directory]  = "#{ ENV['HOME'] }/.dotfiles/bash"
-original_locations[:bash_powerline]  = "#{ ENV['HOME'] }/.dotfiles/bash/partials/prompt-powerline"
-original_locations[:bash_profile]    = "#{ ENV['HOME'] }/.dotfiles/bash/bash_profile"
 original_locations[:bundle]          = "#{ ENV['HOME'] }/.dotfiles/bundle/config"
 original_locations[:editorconfig]    = "#{ ENV['HOME'] }/.dotfiles/editorconfig/editorconfig"
 original_locations[:eslintrc]        = "#{ ENV['HOME'] }/.dotfiles/eslint/eslintrc"
@@ -21,7 +18,6 @@ original_locations[:gitconfig_local] = "#{ ENV['HOME'] }/.dotfiles-local/git/git
 original_locations[:gitignore]       = "#{ ENV['HOME'] }/.dotfiles/git/gitignore"
 original_locations[:gvimrc]          = "#{ ENV['HOME'] }/.dotfiles/vim/gvimrc"
 original_locations[:hyper]           = "#{ ENV['HOME'] }/.dotfiles/hyper/hyper.js"
-original_locations[:inputrc]         = "#{ ENV['HOME'] }/.dotfiles/bash/inputrc"
 original_locations[:prettierrc]      = "#{ ENV['HOME'] }/.dotfiles/prettier/prettierrc"
 original_locations[:rspec]           = "#{ ENV['HOME'] }/.dotfiles/rspec/rspec"
 original_locations[:stylelint]       = "#{ ENV['HOME'] }/.dotfiles/stylelint/stylelintrc"
@@ -29,15 +25,14 @@ original_locations[:tmux_conf]       = "#{ ENV['HOME'] }/.dotfiles/tmux/tmux.con
 original_locations[:tmuxline_conf]   = "#{ ENV['HOME'] }/.dotfiles/tmux/tmuxline_snapshot"
 original_locations[:vim]             = "#{ ENV['HOME'] }/.dotfiles/vim"
 original_locations[:vimrc]           = "#{ ENV['HOME'] }/.dotfiles/vim/vimrc"
+original_locations[:zsh_directory]   = "#{ ENV['HOME'] }/.dotfiles/zsh"
+original_locations[:zprofile]        = "#{ ENV['HOME'] }/.dotfiles/zsh/zprofile"
 
 # ----- New Locations ----- #
 
 new_locations                   = {}
 new_locations[:ackrc]           = "#{ ENV['HOME'] }/.ackrc"
 new_locations[:agignore]        = "#{ ENV['HOME'] }/.agignore"
-new_locations[:bash_directory]  = "#{ ENV['HOME'] }/.bash"
-new_locations[:bash_powerline]  = "#{ ENV['HOME'] }/.bash-powerline.sh"
-new_locations[:bash_profile]    = "#{ ENV['HOME'] }/.bash_profile"
 new_locations[:bundle]          = "#{ ENV['HOME'] }/.bundle/config"
 new_locations[:editorconfig]    = "#{ ENV['HOME'] }/.editorconfig"
 new_locations[:eslintrc]        = "#{ ENV['HOME'] }/.eslintrc"
@@ -55,6 +50,8 @@ new_locations[:tmux_conf]       = "#{ ENV['HOME'] }/.tmux.conf"
 new_locations[:tmuxline_conf]   = "#{ ENV['HOME'] }/.tmuxline_snapshot"
 new_locations[:vim]             = "#{ ENV['HOME'] }/.vim"
 new_locations[:vimrc]           = "#{ ENV['HOME'] }/.vimrc"
+new_locations[:zsh_directory]   = "#{ ENV['HOME'] }/.zsh"
+new_locations[:zprofile]        = "#{ ENV['HOME'] }/.zprofile"
 
 # ----- Installation Order ----- #
 
@@ -64,13 +61,11 @@ tasks = [
   'vundle',
   'rbenv',
   'homebrew',
-  'homebrew_packages',
+  'brewfile',
   'tmux_plugin_manager',
   'nvm',
   'gems',
   'macos_settings',
-  'cask',
-  'mas_apps',
   'terminal_italics',
   'cleanup'
 ]
@@ -183,17 +178,17 @@ namespace :install do
   end
 
   # ====================================
-  #   Install Homebrew Packages
+  #   Install Brewfile
   # ====================================
 
-  desc 'Install a set of Homebrew packages'
-  task :homebrew_packages do
-    prompt 'Homebrew Packages'
+  desc 'Install the Brewfile'
+  task :brewfile do
+    prompt 'Brewfile'
 
     if response?('y')
-      message 'Installing Homebrew Packages...'
+      message 'Installing Brewfile...'
 
-      system 'bash scripts/homebrew-packages'
+      system 'brew bundle'
     end
   end
 
@@ -254,36 +249,6 @@ namespace :install do
       message 'Installing macOS Settings...'
 
       system 'bash scripts/macos'
-    end
-  end
-
-  # ====================================
-  #   Install Cask
-  # ====================================
-
-  desc 'Install macOS applications through brew cask'
-  task :cask do
-    prompt 'Cask & Applications'
-
-    if response?('y')
-      message 'Installing Cask & Applications...'
-
-      system 'bash scripts/cask'
-    end
-  end
-
-  # ====================================
-  #   Install MAS Apps
-  # ====================================
-
-  desc 'Install macOS application through the App Store'
-  task :mas_apps do
-    prompt 'Mac App Store Apps'
-
-    if response?('y')
-      message 'Installing Mac App Store apps...'
-
-      system 'bash scripts/mas'
     end
   end
 
