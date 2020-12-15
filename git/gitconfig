@@ -50,6 +50,7 @@
   editor = nano
   excludesfile = ~/.gitignore
   quotepath = false
+	ignorecase = false
 
 [merge]
 
@@ -91,4 +92,4 @@
 
 [user]
 	name = Conrad VanLandingham
-	email = hi@convan.me
+	email = conrad@differential.com
